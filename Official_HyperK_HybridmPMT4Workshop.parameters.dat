@@ -1,0 +1,78 @@
+*****************************************************************************************
+ fiTQun parameters for HyperK
+*****************************************************************************************
+
+ Turn off fitters that are not tuned or useful right now.
+ ****************************************************************************************
+ < fiTQun.DoProton1RFit = 0 >  Turn off proton fit by default. The Time PDF files for protons haven't been produced yet.
+ < fiTQun.DoPDK_MuGammaFit = 0 > Proton decay fit is slow and should to be studied / adjusted for HyperK before it becomes production ready.
+ *****************************************************************************************
+  < fiTQun.fHybrid = 1 >
+  < fiTQun.DoElectron1RFit = 1 >
+  < fiTQun.DoMuon1RFit = 1 >
+  < fiTQun.DoPionPlus1RFit = 1 >
+  < fiTQun.DoKaonPlus1RFit = 0 >
+  < fiTQun.DoConeGenerator1RFit = 0 >
+  < fiTQun.fConvqp = 20. > Charge to momentum conversion factor. For HK 20k B&L: 24, 40k B&L: 12, 20kB&L + 10k mPMT: 20
+
+# Turn off proton fit by default. The Time PDF files for protons haven't been produced yet
+ < fiTQun.DoProton1RFit = 0 >
+
+ < fiTQun.WCSimConfig = HyperK_HybridmPMT >
+ < fiTQun.WCSimPMTType = 20inchBandLAnd3inchPMTR14374 >
+ < fiTQun.DarkRateWCSim_PMTtype0 = 4.2 >
+ < fiTQun.DarkRateWCSim_PMTtype1 = 0.1 >
+
+ < fiTQun.WaterAttenuationLengthWCSim = 13000. >
+
+ < fiTQun.PeakThrWCSim = 35.6 >
+
+ < fiTQun.QEEffWCSim_PMTtype0 = 0.249 > Previous value 0.230
+ < fiTQun.QEEffWCSim_PMTtype1 = 0.215 > Previous value 0.216
+ < fiTQun.QEEffCorrWCSim_PMTtype0 = 1. > Previous value 0.210
+ < fiTQun.QEEffCorrWCSim_PMTtype1 = 1. > Previous value 0.210
+ < fiTQun.QmuConvFactWCSim = 1.0 >    
+
+ < fiTQun.QECorrElectron1RFit = 0.990 >
+ < fiTQun.QECorrMuon1RFit = 0.930 >
+
+ < fiTQun.GainCorrFactWCSim = 1.0 >
+
+  < fiTQun.DoPi0Fit = 1 >                0 = off, 1 = standard, 2 = constrained mass
+  <  fiTQun.DoPi0Fit2 = 0 >               0 = off, 1 = standard, 2 = constrained mass
+
+ < fiTQun.PIDCutEPipa0WCSim = -10. >
+ < fiTQun.PIDCutEPipa1WCSim = 0. >
+ 
+ Not tuned for now. Not used in Seq MR fit
+ < fiTQun.PIDCutMuPip0WCSim = 0. >
+ < fiTQun.PIDCutMuPip1WCSim = 0. >
+
+ < fiTQun.RCCuta0WCSim = 0. > Default value for summer 2019 = 126.
+ < fiTQun.RCCuta1WCSim = 0. >
+ < fiTQun.RCCut1Ea0WCSim = 0. > Default value for summer 2019 = 175.
+ < fiTQun.RCCut1Mua0WCSim = 0. > Default value for summer 2019 = 483
+
+ < fiTQun.DoBiasCorrection = 0 > Set to 1 if you want to apply empirical bias corrections to fit results
+ < fiTQun.UseScatteredLight = 0 > Flag for scattered light predicted charges (0:off, 1:6D, 2:3D, 4:6D for 1Rfit 3D otherwise)
+ < fiTQun.TotalChargeConstraintWeight = 0 > Weight of the total charge constraint term in the likelihood function.
+ < fiTQun.UseTimeLikelihood = 1 > Set to 1 to use time likelihoods
+
+ < fiTQun.inDirtPDFGamma = 97.62 >
+ < fiTQun.inDirtPDFSigma = 4.42 >
+ < fiTQun.inDirtPDFt0 = 6.10 >
+
+ < fiTQun.vtxPreFitNfitr = 4 >
+ < fiTQun.vtxPreFitSigmar0 = 1200. >
+ < fiTQun.vtxPreFitSigmar1 = 600. >
+ < fiTQun.vtxPreFitSigmar2 = 80. >
+ < fiTQun.vtxPreFitSigmar3 = 25. >
+ < fiTQun.vtxPreFitGrdszVtx = 1000. >
+ < fiTQun.vtxPreFitGrdsztime = 15. >
+
+ < fiTQun.FitMRConvL = 0 > Use conversion length in the multi-ring fitter
+ < fiTQun.DoMSFit = 0 >                 Toggle multiple-segment fits for muons
+ < fiTQun.DoMRFit = 0 >                 Set to 1 if you want to run the multi-ring fit(Setting it to n>1 will only fit up to n-ring)
+ < fiTQun.DoMoreMRFit = 00 >            Improve the MR fit results obtained above. Set this to 10*Y+X where:
+                                              X = 0 : Don't perform sequential MR fit
+                                              Y = 0 : Don't perform simult. vtx & energy fit
